@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Registro de Productos</title>
+    </h:head>
+    <h:body>
+        <h1>REGISTRO DE PRODUCTOS</h1>
+        <h:form>
+            <h:panelGrid columns="3" columnClasses="alinder,alinizq,alinizq">
+                
+                <h:outputLabel value="Producto: " for="producto"/>
+                <h:inputText id="producto" label="Producto" value="#{productosBean.producto}">
+                <f:validateLength minimum="5"/>
+                </h:inputText>
+                <h:message for="producto"/>
+                
+                <h:outputLabel value="Categoria: " for="categoria"/>
+                <h:selectOneMenu id="categoria" label="Categoria" value="#{productosBean.categoria}">
+                    <f:selectItem itemLabel="-seleccione-" itemValue=""/>
+                    <f:selectItem itemLabel="ABARROTES" itemValue="ABARROTES"/>
+                    <f:selectItem itemLabel="LICORES" itemValue="LICORES"/>
+                    <f:selectItem itemLabel="MAQUILLAJE" itemValue="MAQUILLAJE"/>
+                    <f:selectItem itemLabel="MUEBLES" itemValue="MUEBLES"/>
+                    <f:selectItem itemLabel="VEHICULOS" itemValue="VEHICULOS"/>
+                    <f:selectItem itemLabel="ROPA" itemValue="ROPA"/>
+                </h:selectOneMenu>
+                <h:message for="categoria"/>
+                
+                <h:outputLabel value="Existencia: " for="existencia"/>
+                <h:inputText id="existencia" label="Existencia" required="true" value="#{productosBean.existencia}">
+                <f:validateLength minimum="5"/>
+                </h:inputText>
+                <h:message for="existencia"/>
+                
+                <h:outputLabel value="Precio: " for="precio"/>
+                <h:inputText id="precio" label="Precio" required="true" value="#{productosBean.precio}"/>
+                <h:message for="precio"/>
+                
+                <h:panelGroup/>
+                <h:commandButton id="registro" value="Enviar" action="confirmacionProducto"/>
+                
+                <h:commandLink action="index" value="Retornar al inicio"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+

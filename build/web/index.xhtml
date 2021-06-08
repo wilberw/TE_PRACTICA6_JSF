@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>MENU</title> 
+    </h:head>
+    <h:body>
+        <h:form>
+        <h1>DATOS PERSONALES</h1>    
+            <h:panelGrid columns="2" border="2" columnClasses="alinder,normal">
+                
+                <h:outputText value=" NOMBRE: "/>
+                <h:outputText value=" WILBER WILSONCRUZ MARQUEZ "/>
+                <h:outputText value=" CARNET: "/>
+                <h:outputText value=" 8566577 P.T. "/>
+                <h:outputText value=" R.U.: "/>
+                <h:outputText value=" 11002230 "/>
+                <h:outputText value=" MATERIA: "/>
+                <h:outputText value=" EMERGENTESII "/>
+                <h:outputText value=" PRACTICA: "/>
+                <h:outputText value=" 6 - JSF "/>
+                  
+            </h:panelGrid>
+            <h1>MENU DE REGISTROS</h1>
+            <h:panelGrid columns="2" columnClasses="alinder,normal">
+                <h:commandLink action="curso" value="INSCRIPCION DE CURSO"/>
+                <h:commandLink action="usuarios" value="REGISTRO DE USUARIOS"/>
+                <h:commandLink action="productos" value="REGISTRO DE PRODUCTOS"/>
+                <h:commandLink action="libros" value="REGISTRO DE LIBROS"/>
+            </h:panelGrid>    
+        </h:form>
+    </h:body>
+</html>
+
